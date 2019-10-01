@@ -1,90 +1,95 @@
 # HEAD
 
-> A list of everything that \*could\* go in the `<head>` of your document
+> Sebuah daftar dari semua yang \*dapat\* masuk di dalam `<head>` dari dokumenmu
 
 [![CC0](https://img.shields.io/badge/license-CC0-green.svg?style=flat-square)](https://creativecommons.org/publicdomain/zero/1.0/)
 [![Contributors](https://img.shields.io/github/contributors/joshbuchea/head.svg?style=flat-square)](https://github.com/joshbuchea/HEAD/graphs/contributors)
 
 ## Table of Contents
 
-- [Recommended Minimum](#recommended-minimum)
-- [Elements](#elements)
-- [Meta](#meta)
-- [Link](#link)
-- [Icons](#icons)
-- [Social](#social)
-  - [Facebook Open Graph](#facebook-open-graph)
-  - [Twitter Card](#twitter-card)
-  - [Twitter Privacy](#twitter-privacy)
-  - [Schema.org](#schemaorg)
-  - [Pinterest](#pinterest)
-  - [Facebook Instant Articles](#facebook-instant-articles)
-  - [OEmbed](#oembed)
-- [Browsers / Platforms](#browsers--platforms)
-  - [Apple iOS](#apple-ios)
-  - [Google Android](#google-android)
-  - [Google Chrome](#google-chrome)
-  - [Microsoft Internet Explorer](#microsoft-internet-explorer)
-- [Browsers (Chinese)](#browsers-chinese)
-  - [360 Browser](#360-browser)
-  - [QQ Mobile Browser](#qq-mobile-browser)
-  - [UC Mobile Browser](#uc-mobile-browser)
-- [App Links](#app-links)
-- [Other Resources](#other-resources)
-- [Related Projects](#related-projects)
-- [Other Formats](#other-formats)
-- [Translations](#translations)
-- [Contributing](#contributing)
-  - [Contributors](#contributors)
-- [Author](#author)
-- [License](#license)
+- [HEAD](#head)
+  - [Table of Contents](#table-of-contents)
+  - [Recommended Minimum](#recommended-minimum)
+  - [Elements](#elements)
+  - [Meta](#meta)
+  - [Link](#link)
+  - [Icons](#icons)
+  - [Social](#social)
+    - [Facebook Open Graph](#facebook-open-graph)
+    - [Twitter Card](#twitter-card)
+    - [Twitter Privacy](#twitter-privacy)
+    - [Schema.org](#schemaorg)
+    - [Pinterest](#pinterest)
+    - [Facebook Instant Articles](#facebook-instant-articles)
+    - [OEmbed](#oembed)
+  - [Browsers / Platforms](#browsers--platforms)
+    - [Apple iOS](#apple-ios)
+    - [Google Android](#google-android)
+    - [Google Chrome](#google-chrome)
+    - [Microsoft Internet Explorer](#microsoft-internet-explorer)
+  - [Browsers (Chinese)](#browsers-chinese)
+    - [360 Browser](#360-browser)
+    - [QQ Mobile Browser](#qq-mobile-browser)
+    - [UC Mobile Browser](#uc-mobile-browser)
+  - [App Links](#app-links)
+  - [Other Resources](#other-resources)
+  - [Related Projects](#related-projects)
+  - [Other Formats](#other-formats)
+  - [Translations](#translations)
+  - [Contributing](#contributing)
+    - [Guide](#guide)
+      - [1. `master`](#1-master)
+      - [2. `gh-pages`](#2-gh-pages)
+    - [Contributors](#contributors)
+  - [Author](#author)
+  - [License](#license)
 
 ## Recommended Minimum
 
-Below are the essential elements for any web document (websites/apps):
+Di bawah ini adalah elemen-elemen penting dari tiap dokumen web (website/aplikasi):
 
 ```html
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!--
-  The above 2 meta tags *must* come first in the <head>
-  to consistently ensure proper document rendering.
-  Any other head element should come *after* these tags.
+  2 meta tags di atas *harus* ada di awal-awal pada <head>
+  untuk memastikan konsistensi rendering dokumen yang layak.
+  Elemen "head" yang lain harus hadir *setelah* tag-tag tersebut.
  -->
-<title>Page Title</title>
+<title>Halaman Judul</title>
 ```
 
 **[⬆ back to top](#table-of-contents)**
 
 ## Elements
 
-Valid `<head>` elements include `meta`, `link`, `title`, `style`, `script`, `noscript`, and `base`.
+Valid `<head>` elemen termasuk `meta`, `link`, `title`, `style`, `script`, `noscript`, and `base`.
 
-These elements provide information for how a document should be perceived, and rendered, by web technologies. e.g. browsers, search engines, bots, etc.
+Elemen-elemen berikut menyajikan informasi bagaimana sebuah dokumen seharusnya dirasakan (perceived), dan di-render, dengan teknologi web. misalnya. browsers, search engines, bots, dll.
 
 ```html
 <!--
-  Set the character encoding for this document, so that
-  all characters within the UTF-8 space (such as emoji)
-  are rendered correctly.
+  Meneteapkan character encoding untuk dokumen ini, sehingga
+  semua karakter berada pada format UTF-8 (contohnya emoji)
+  di-render secara benar.
 -->
 <meta charset="utf-8">
 
-<!-- Set the document's title -->
-<title>Page Title</title>
+<!-- Menentukan Judul Dokumen -->
+<title>Halaman Judul</title>
 
-<!-- Set the base URL for all relative URLs within the document -->
+<!-- Menentukan dasar alamat URL untuk semua URL terkait didalam dokumen -->
 <base href="https://example.com/page.html">
 
-<!-- Link to an external CSS file -->
+<!-- Tautan ke file CSS eksternal  -->
 <link rel="stylesheet" href="styles.css">
 
-<!-- Used for adding in-document CSS -->
+<!-- Digunakan untuk menambahkan in-dokumen CSS -->
 <style>
   /* ... */
 </style>
 
-<!-- JavaScript & No-JavaScript tags -->
+<!-- JavaScript & Bukan-JavaScript tags -->
 <script src="script.js"></script>
 <script>
   // function(s) go here
@@ -100,41 +105,41 @@ These elements provide information for how a document should be perceived, and r
 
 ```html
 <!--
-  The following 2 meta tags *must* come first in the <head>
-  to consistently ensure proper document rendering.
-  Any other head element should come *after* these tags.
+  2 meta tags di atas *harus* ada di awal-awal pada <head>
+  untuk memastikan konsistensi rendering dokumen yang layak.
+  Elemen "head" yang lain harus hadir *setelah* tag-tag tersebut.
 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <!--
-  Allows control over where resources are loaded from.
-  Place as early in the <head> as possible, as the tag  
-  only applies to resources that are declared after it.
+  Mengizinkan kontrol resources dapat diambil dari sumber yang mana.
+  Tempatkan seawal mungkin di <head>, mengingat tag  
+  hanya berlaku terhadap resources yang dideklarasikan setelah itu.
 -->
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'">
 
-<!-- Name of web application (only should be used if the website is used as an app) -->
-<meta name="application-name" content="Application Name">
+<!-- Nama dari Aplikasi Web (hanya digunakan jika website digunakan sebagai sebuah app) -->
+<meta name="application-name" content="Nama Aplikasi">
 
-<!-- Theme Color for Chrome, Firefox OS and Opera -->
+<!-- Warna tema untuk Chrome, Firefox OS dan Opera -->
 <meta name="theme-color" content="#4285f4">
 
-<!-- Short description of the document (limit to 150 characters) -->
-<!-- This content *may* be used as a part of search engine results. -->
-<meta name="description" content="A description of the page">
+<!-- Deskripsi singkat dari sebua dokumen (terbatas sampai 150 karakter) -->
+<!-- Isian ini *mungkin* dapat digunakan sebagai sebuah bagian hasil mesin pencari (search engine). -->
+<meta name="description" content="Sebuah deskripsi dari halaman">
 
-<!-- Control the behavior of search engine crawling and indexing -->
-<meta name="robots" content="index,follow"><!-- All Search Engines -->
-<meta name="googlebot" content="index,follow"><!-- Google Specific -->
+<!-- Mengendalikan tingkah laku dari mesin pencari (search engine) crawling dan indexing -->
+<meta name="robots" content="index,follow"><!-- Semua Mesing Pencari(Search Engines) -->
+<meta name="googlebot" content="index,follow"><!-- Spesifik Google -->
 
-<!-- Tells Google not to show the sitelinks search box -->
+<!-- Memberitahu Google untuk tidak menunjukan sitelinks kotak pencari -->
 <meta name="google" content="nositelinkssearchbox">
 
-<!-- Tells Google not to provide a translation for this document -->
+<!-- Memberitahu Google untuk tidak memberikan penterjemahan untuk dokumen ini -->
 <meta name="google" content="notranslate">
 
-<!-- Verify website ownership -->
+<!-- Memvalidasi kepemilakan website -->
 <meta name="google-site-verification" content="verification_token"><!-- Google Search Console -->
 <meta name="yandex-verification" content="verification_token"><!-- Yandex Webmasters -->
 <meta name="msvalidate.01" content="verification_token"><!-- Bing Webmaster Center -->
@@ -142,95 +147,95 @@ These elements provide information for how a document should be perceived, and r
 <meta name="p:domain_verify" content="code_from_pinterest"><!-- Pinterest Console-->
 <meta name="norton-safeweb-site-verification" content="norton_code"><!-- Norton Safe Web -->
 
-<!-- Identify the software used to build the document (i.e. - WordPress, Dreamweaver) -->
+<!-- Mengidentifikasi software digunakan untuk membangun dokumen (misalnya - WordPress, Dreamweaver) -->
 <meta name="generator" content="program">
 
-<!-- Short description of your document's subject -->
-<meta name="subject" content="your document's subject">
+<!-- Deskripsi singkat subyek dari dokumen anda -->
+<meta name="subject" content="Subyek dokumen anda">
 
-<!-- Gives a general age rating based on the document's content -->
+<!-- Memberikan rating usia umum berdasarkan isi dari dokumen -->
 <meta name="rating" content="General">
 
-<!-- Allows control over how referrer information is passed -->
+<!-- Mengizinkan pengendalian melalui bagaimana "referrer information" berlalu -->
 <meta name="referrer" content="no-referrer">
 
-<!-- Disable automatic detection and formatting of possible phone numbers -->
+<!-- Menonaktifkan deteksi dan pemformatan dari nomor telpon yang mungkin -->
 <meta name="format-detection" content="telephone=no">
 
-<!-- Completely opt out of DNS prefetching by setting to "off" -->
+<!-- Sepenuhnya memilih keluar dari "DNS prefetching" melakukan penyetelan ke- "off" -->
 <meta http-equiv="x-dns-prefetch-control" content="off">
 
-<!-- Specifies the document to appear in a specific frame -->
+<!-- Menspesifikan dokumen untuk tampil pada sebuah frame yang spesifik -->
 <meta http-equiv="Window-Target" content="_value">
 
 <!-- Geo tags -->
 <meta name="ICBM" content="latitude, longitude">
 <meta name="geo.position" content="latitude;longitude">
-<meta name="geo.region" content="country[-state]"><!-- Country code (ISO 3166-1): mandatory, state code (ISO 3166-2): optional; eg. content="US" / content="US-NY" -->
-<meta name="geo.placename" content="city/town"><!-- eg. content="New York City" -->
+<meta name="geo.region" content="country[-state]"><!-- Kode negara (ISO 3166-1): wajib, kode negara bagian (ISO 3166-2): optional; conth. content="US" / content="US-NY" -->
+<meta name="geo.placename" content="city/town"><!-- contoh. content="New York City" -->
 ```
 
-- 📖 [Meta tags that Google understands](https://support.google.com/webmasters/answer/79812?hl=en)
+- 📖 [Meta tag yang dikenali Google](https://support.google.com/webmasters/answer/79812?hl=en)
 - 📖 [WHATWG Wiki: MetaExtensions](https://wiki.whatwg.org/wiki/MetaExtensions)
-- 📖 [ICBM on Wikipedia](https://en.wikipedia.org/wiki/ICBM_address#Modern_use)
-- 📖 [Geotagging on Wikipedia](https://en.wikipedia.org/wiki/Geotagging#HTML_pages)
+- 📖 [ICBM pada Wikipedia](https://en.wikipedia.org/wiki/ICBM_address#Modern_use)
+- 📖 [Geotagging pada Wikipedia](https://en.wikipedia.org/wiki/Geotagging#HTML_pages)
 
 **[⬆ back to top](#table-of-contents)**
 
 ## Link
 
 ```html
-<!-- Points to an external stylesheet -->
+<!-- Mengarahkan ke sebuah stylesheet eksternal -->
 <link rel="stylesheet" href="https://example.com/styles.css">
 
-<!-- Helps prevent duplicate content issues -->
+<!-- Membantu pencegahan duplikasi isian isu -->
 <link rel="canonical" href="https://example.com/article/?page=2">
 
-<!-- Links to an AMP HTML version of the current document -->
+<!-- Tautan ke sebuah versi AMP HTML dari dokumen terkini -->
 <link rel="amphtml" href="https://example.com/path/to/amp-version.html">
 
-<!-- Links to a JSON file that specifies "installation" credentials for the web applications -->
+<!-- Tautan ke sebuah JSON file yang menspesifikan "installation" credentials untuk aplikasi web -->
 <link rel="manifest" href="manifest.json">
 
-<!-- Links to information about the author(s) of the document -->
+<!-- Tautan ke informasi mengenai penulis dari dokumen -->
 <link rel="author" href="humans.txt">
 
-<!-- Refers to a copyright statement that applies to the link's context -->
+<!-- Mengacu ke sebuah pernyataan hak cipta yang berlaku terhadap konteks tautan -->
 <link rel="license" href="copyright.html">
 
-<!-- Gives a reference to a location in your document that may be in another language -->
+<!-- Memberikan referensi ke sebuah lokasi di dalam dokumen yang mungkin terdapat di bahasa yang lain -->
 <link rel="alternate" href="https://es.example.com/" hreflang="es">
 
-<!-- Provides information about an author or another person -->
+<!-- Memberikan informasi tentang seorang penulis atau orang lain -->
 <link rel="me" href="https://google.com/profiles/thenextweb" type="text/html">
 <link rel="me" href="mailto:name@example.com">
 <link rel="me" href="sms:+15035550125">
 
-<!-- Links to a document that describes a collection of records, documents, or other materials of historical interest -->
+<!-- Tautan ke dokumen yang mendeskripsikan sebuah koleksi catatan, dokumen, atau bahan material lain yang menarik sejarah -->
 <link rel="archives" href="https://example.com/archives/">
 
-<!-- Links to top level resource in an hierarchical structure -->
+<!-- Tautan ke top level resource pada sebuah struktur hierarki -->
 <link rel="index" href="https://example.com/article/">
 
-<!-- Provides a self reference - useful when the document has multiple possible references -->
+<!-- Menyajikan referensi diri - berguna saat dokumen memiliki beberapa referensi yang mungkin -->
 <link rel="self" type="application/atom+xml" href="https://example.com/atom.xml">
 
-<!-- The first, last, previous, and next documents in a series of documents, respectively -->
+<!-- Yang pertama, akhir, sebelumnya, and setelahnya dokumen pada sebuah rangkaian dari dokumen, secara berurutan -->
 <link rel="first" href="https://example.com/article/">
 <link rel="last" href="https://example.com/article/?page=42">
 <link rel="prev" href="https://example.com/article/?page=1">
 <link rel="next" href="https://example.com/article/?page=3">
 
-<!-- Used when a 3rd party service is utilized to maintain a blog -->
+<!-- Digunakan saat service pihak ketiga digunakan untuk memelihara sebuah blog -->
 <link rel="EditURI" href="https://example.com/xmlrpc.php?rsd" type="application/rsd+xml" title="RSD">
 
-<!-- Forms an automated comment when another WordPress blog links to your WordPress blog or post -->
+<!-- Formulir sebuah komentar otomatis dimana tautan blog WordPress yang lain ke blog WordPress anda atau post -->
 <link rel="pingback" href="https://example.com/xmlrpc.php">
 
-<!-- Notifies a URL when you link to it on your document -->
+<!-- Memberi tahu sebuah URL saat anda melakukan link kepadanya pada dokumen anda -->
 <link rel="webmention" href="https://example.com/webmention">
 
-<!-- Enables posting to your own domain using a Micropub client -->
+<!-- Memungkinkan posting ke domain anda sendiri menggunakan sebuah Micropub client -->
 <link rel="micropub" href="https://example.com/micropub">
 
 <!-- Open Search -->
@@ -241,7 +246,7 @@ These elements provide information for how a document should be perceived, and r
 <link rel="alternate" href="https://example.com/feed.atom" type="application/atom+xml" title="Atom 0.3">
 
 <!-- Prefetching, preloading, prebrowsing -->
-<!-- More info: https://css-tricks.com/prefetching-preloading-prebrowsing/ -->
+<!-- Info lebih lanjut: https://css-tricks.com/prefetching-preloading-prebrowsing/ -->
 <link rel="dns-prefetch" href="//example.com/">
 <link rel="preconnect" href="https://www.example.com/">
 <link rel="prefetch" href="https://www.example.com/">
@@ -256,10 +261,10 @@ These elements provide information for how a document should be perceived, and r
 ## Icons
 
 ```html
-<!-- For IE 10 and below -->
-<!-- Place favicon.ico in the root directory - no tag necessary -->
+<!-- Untuk IE 10 dan kebawah -->
+<!-- Tempatkan favicon.ico pada direktori root - tidak ada tag yang diperlukan -->
 
-<!-- Icon in the highest resolution we need it for -->
+<!-- Icon untuk resolusi tertinggi yang dibutuhkan -->
 <link rel="icon" sizes="192x192" href="/path/to/icon.png">
 
 <!-- Apple Touch Icon (reuse 192px icon.png) -->
@@ -269,8 +274,8 @@ These elements provide information for how a document should be perceived, and r
 <link rel="mask-icon" href="/path/to/icon.svg" color="blue">
 ```
 
-- 📖 [All About Favicons (And Touch Icons)](https://bitsofco.de/all-about-favicons-and-touch-icons/)
-- 📖 [Creating Pinned Tab Icons](https://developer.apple.com/library/content/documentation/AppleApplications/Reference/SafariWebContent/pinnedTabs/pinnedTabs.html)
+- 📖 [Semua tentang Favicons (dan Touch Icons)](https://bitsofco.de/all-about-favicons-and-touch-icons/)
+- 📖 [Membuat Pinned Tab Icons](https://developer.apple.com/library/content/documentation/AppleApplications/Reference/SafariWebContent/pinnedTabs/pinnedTabs.html)
 - 📖 [Favicon Cheat Sheet](https://github.com/audreyr/favicon-cheat-sheet)
 - 📖 [Icons & Browser Colors](https://developers.google.com/web/fundamentals/design-and-ux/browser-customization/)
 
@@ -295,7 +300,7 @@ These elements provide information for how a document should be perceived, and r
 
 - 📖 [Facebook Open Graph Markup](https://developers.facebook.com/docs/sharing/webmasters#markup)
 - 📖 [Open Graph protocol](http://ogp.me/)
-- 🛠 Test your page with the [Facebook Sharing Debugger](https://developers.facebook.com/tools/debug/)
+- 🛠 Test halaman anda dengan [Facebook Sharing Debugger](https://developers.facebook.com/tools/debug/)
 
 ### Twitter Card
 
@@ -310,13 +315,13 @@ These elements provide information for how a document should be perceived, and r
 <meta name="twitter:image:alt" content="A text description of the image conveying the essential nature of an image to users who are visually impaired. Maximum 420 characters.">
 ```
 
-- 📖 [Getting started with cards — Twitter Developers](https://dev.twitter.com/cards/getting-started)
-- 🛠 Test your page with the [Twitter Card Validator](https://cards-dev.twitter.com/validator)
+- 📖 [Memulai dengan kartu — Twitter Developers](https://dev.twitter.com/cards/getting-started)
+- 🛠 Test halaman anda dengan [Twitter Card Validator](https://cards-dev.twitter.com/validator)
 
 ### Twitter Privacy
-If you embed tweets in your website, Twitter can use information from your site to tailor content and suggestions to Twitter users. [More about Twitter privacy options](https://dev.twitter.com/web/overview/privacy#what-privacy-options-do-website-publishers-have).
+Jika anda melakukan embed tweets pada website anda, Twitter dapat menggunkan informasi dari situs anda untuk mengkurasi isi dan rekomendasi untuk pengguna Twitter. [Lebih lanjut tentang Twitter privacy options](https://dev.twitter.com/web/overview/privacy#what-privacy-options-do-website-publishers-have).
 ```html
-<!-- disallow Twitter from using your site's info for personalization purposes -->
+<!-- tidak mengijinkan Twitter dari menggunakan situs anda untuk tujuan personalisasi -->
 <meta name="twitter:dnt" content="on">
 ```
 
@@ -332,16 +337,16 @@ If you embed tweets in your website, Twitter can use information from your site 
       <meta itemprop="image" content="https://example.com/image.jpg">
 ```
 
-**Note:** These meta tags require the `itemscope` and `itemtype` attributes to be added to the `<html>` tag.
+**Note:** Meta tags berikut diperlukan `itemscope` dan `itemtype` atribut untuk ditambahkan ke `<html>` tag.
 
-- 🛠 Test your page with the [Structured Data Testing Tool](https://developers.google.com/structured-data/testing-tool/)
+- 🛠 Test halaman anda dengan [Structured Data Testing Tool](https://developers.google.com/structured-data/testing-tool/)
 
 ### Pinterest
 
-Pinterest lets you prevent people from saving things from your website, according [to their help center](https://help.pinterest.com/en/business/article/prevent-saves-to-pinterest-from-your-site). The `description` is optional.
+Pinterest mengizinkan anda untuk mencegah orang dari menyimpan hal-hal dari website anda, menurut [pusat bantuan mereka](https://help.pinterest.com/en/business/article/prevent-saves-to-pinterest-from-your-site). `description` adalah optional.
 
 ```html
-<meta name="pinterest" content="nopin" description="Sorry, you can't save from my website!">
+<meta name="pinterest" content="nopin" description="Maaf, anda tidak dapat menyimpan dari website saya!">
 ```
 
 ### Facebook Instant Articles
@@ -350,15 +355,15 @@ Pinterest lets you prevent people from saving things from your website, accordin
 <meta charset="utf-8">
 <meta property="op:markup_version" content="v1.0">
 
-<!-- The URL of the web version of your article -->
+<!-- URL versi web dari artikel anda -->
 <link rel="canonical" href="https://example.com/article.html">
 
-<!-- The style to be used for this article -->
+<!-- Style yang digunakan untuk artikel ini -->
 <meta property="fb:article_style" content="myarticlestyle">
 ```
 
-- 📖 [Creating Articles - Instant Articles](https://developers.facebook.com/docs/instant-articles/guides/articlecreate)
-- 📖 [Code Samples - Instant Articles](https://developers.facebook.com/docs/instant-articles/reference)
+- 📖 [Membuat Artikel - Artikel Instan](https://developers.facebook.com/docs/instant-articles/guides/articlecreate)
+- 📖 [Contoh Kode - Artikel Instan](https://developers.facebook.com/docs/instant-articles/reference)
 
 ### OEmbed
 
@@ -383,7 +388,7 @@ Pinterest lets you prevent people from saving things from your website, accordin
 <!-- Smart App Banner -->
 <meta name="apple-itunes-app" content="app-id=APP_ID,affiliate-data=AFFILIATE_ID,app-argument=SOME_TEXT">
 
-<!-- Disable automatic detection and formatting of possible phone numbers -->
+<!-- Nonaktifkan deteksi otomatis dan pemformatan nomor telpon yang mungkin -->
 <meta name="format-detection" content="telephone=no">
 
 <!-- Launch Icon (180x180px or larger) -->
@@ -395,10 +400,10 @@ Pinterest lets you prevent people from saving things from your website, accordin
 <!-- Launch Icon Title -->
 <meta name="apple-mobile-web-app-title" content="App Title">
 
-<!-- Enable standalone (full-screen) mode -->
+<!-- Mengaktifkan standalone (full-screen) mode -->
 <meta name="apple-mobile-web-app-capable" content="yes">
 
-<!-- Status bar appearance (has no effect unless standalone mode is enabled) -->
+<!-- Tampilan Status bar (tidak ada efek kecuali kalo standalone mode diaktifkan) -->
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
 <!-- iOS app deep linking -->
@@ -406,14 +411,14 @@ Pinterest lets you prevent people from saving things from your website, accordin
 <link rel="alternate" href="ios-app://APP-ID/http/url-sample.com">
 ```
 
-- 📖 [Configuring Web Applications](https://developer.apple.com/library/content/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html)
+- 📖 [Mengkonfigurasi Aplikasi Web](https://developer.apple.com/library/content/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html)
 
 ### Google Android
 
 ```html
 <meta name="theme-color" content="#E64545">
 
-<!-- Add to home screen -->
+<!-- Menambahkan ke home screen -->
 <meta name="mobile-web-app-capable" content="yes">
 <!-- More info: https://developer.chrome.com/multidevice/android/installtohomescreen -->
 
@@ -427,24 +432,24 @@ Pinterest lets you prevent people from saving things from your website, accordin
 ```html
 <link rel="chrome-webstore-item" href="https://chrome.google.com/webstore/detail/APP_ID">
 
-<!-- Disable translation prompt -->
+<!-- Menonaktifkan prompt penerjamah -->
 <meta name="google" content="notranslate">
 ```
 
 ### Microsoft Internet Explorer
 
 ```html
-<!-- Force IE 8/9/10 to use its latest rendering engine -->
+<!-- Memaksa IE 8/9/10 untuk menggunakan rendering engine terakhirnya -->
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-<!-- Disable automatic detection and formatting of possible phone numbers by Skype Toolbar browser extension -->
+<!-- Nonaktifkan deteksi otomatis dan pemformatan nomor telpon yang mungkin dari Skype Toolbar browser extension -->
 <meta name="skype_toolbar" content="skype_toolbar_parser_compatible">
 
-<!-- Windows Tiles -->
+<!-- Judul Window -->
 <meta name="msapplication-config" content="/browserconfig.xml">
 ```
 
-Minimum required xml markup for `browserconfig.xml`:
+Kebutuhan minimal xml markup untuk `browserconfig.xml`:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -460,7 +465,7 @@ Minimum required xml markup for `browserconfig.xml`:
 </browserconfig>
 ```
 
-- 📖 [Browser configuration schema reference](https://msdn.microsoft.com/en-us/library/dn320426.aspx)
+- 📖 [Referensi skema konfigurasi browser](https://msdn.microsoft.com/en-us/library/dn320426.aspx)
 
 **[⬆ back to top](#table-of-contents)**
 
@@ -469,45 +474,45 @@ Minimum required xml markup for `browserconfig.xml`:
 ### 360 Browser
 
 ```html
-<!-- Select rendering engine order -->
+<!-- Memilih urutan rendering engine -->
 <meta name="renderer" content="webkit|ie-comp|ie-stand">
 ```
 
 ### QQ Mobile Browser
 
 ```html
-<!-- Locks the screen into the specified orientation -->
+<!-- Mengunci layar kunci ke orientasi yang spesifik -->
 <meta name="x5-orientation" content="landscape/portrait">
 
-<!-- Display this document in fullscreen -->
+<!-- Menampilkan dokumen ini ke tampilan fullscreen -->
 <meta name="x5-fullscreen" content="true">
 
-<!-- Document will be displayed in "application mode" (fullscreen, etc.) -->
+<!-- Dokumen akan ditampilkan dalam "application mode" (fullscreen, etc.) -->
 <meta name="x5-page-mode" content="app">
 ```
 
 ### UC Mobile Browser
 
 ```html
-<!-- Locks the screen into the specified orientation -->
+<!-- Mengunci layar kunci ke orientasi yang spesifik -->
 <meta name="screen-orientation" content="landscape/portrait">
 
-<!-- Display this document in fullscreen -->
+<!-- Menampilkan dokumen ini ke tampilan fullscreen -->
 <meta name="full-screen" content="yes">
 
-<!-- UC browser will display images even if in "text mode" -->
+<!-- UC browser akan menampilkan gambar walaupun pada "text mode" -->
 <meta name="imagemode" content="force">
 
-<!-- Document will be displayed in "application mode"(fullscreen, forbidding gesture, etc.) -->
+<!-- Dokumen akan ditampilkan pada "application mode"(fullscreen, forbidding gesture, etc.) -->
 <meta name="browsermode" content="application">
 
-<!-- Disabled the UC browser's "night mode" for this document -->
+<!-- Menonaktifkan UC browser's "night mode" untuk dokumen ini -->
 <meta name="nightmode" content="disable">
 
-<!-- Simplify the document to reduce data transfer -->
+<!-- Menyederhanakan dokumen untuk mengurangi transfer data -->
 <meta name="layoutmode" content="fitscreen">
 
-<!-- Disable the UC browser's feature of "scaling font up when there are many words in this document" -->
+<!-- Menonaktifkan fitur UC browser  "Membesarkan font saat banyak kata pada dokumen ini" -->
 <meta name="wap-font-scale" content="no">
 ```
 
@@ -545,10 +550,10 @@ Minimum required xml markup for `browserconfig.xml`:
 
 ## Related Projects
 
-- [Atom HTML Head Snippets](https://github.com/joshbuchea/atom-html-head-snippets) - Atom package for `HEAD` snippets
-- [Sublime Text HTML Head Snippets](https://github.com/marcobiedermann/sublime-head-snippets) - Sublime Text package for `HEAD` snippets
-- [head-it](https://github.com/hemanth/head-it) - CLI interface for `HEAD` snippets
-- [vue-head](https://github.com/ktquez/vue-head) - Manipulating the meta information of the `HEAD` tag for Vue.js
+- [Atom HTML Head Snippets](https://github.com/joshbuchea/atom-html-head-snippets) - Atom package untuk `HEAD` snippets
+- [Sublime Text HTML Head Snippets](https://github.com/marcobiedermann/sublime-head-snippets) - Sublime Text package untuk `HEAD` snippets
+- [head-it](https://github.com/hemanth/head-it) - CLI interface untuk `HEAD` snippets
+- [vue-head](https://github.com/ktquez/vue-head) - Memanipulasi informasi meta pada sebuah `HEAD` tag untuk Vue.js
 
 **[⬆ back to top](#table-of-contents)**
 
@@ -569,6 +574,7 @@ Minimum required xml markup for `browserconfig.xml`:
 - 🇷🇺 [Russian/Русский](https://github.com/Konfuze/HEAD)
 - 🇪🇸 [Spanish](https://github.com/alvaroadlf/HEAD)
 - 🇹🇷 [Turkish/Türkçe](https://github.com/mkg0/HEAD)
+- 🇮🇩 [Bahasa](https://github.com/rijdz/HEAD)
 
 **[⬆ back to top](#table-of-contents)**
 
@@ -578,28 +584,28 @@ Minimum required xml markup for `browserconfig.xml`:
 
 ### Guide
 
-The **HEAD** repository consists of two branches:
+The **HEAD** repository terdiri dari 2 cabang:
 
 #### 1. `master`
 
-This branch consists of the `README.md` file that is automatically reflected on the [htmlhead.dev](https://htmlhead.dev/) website. All changes to the content of the cheat sheet as such should be directed to this file.
+Cabang ini terdiri dari `README.md` yang terefleksi otomatis ke [htmlhead.dev](https://htmlhead.dev/) website. Semua perubahan pada isian "cheat sheet" dengan demikian seharusnya sudah diarahkan ke file ini.
 
-Please follow these steps for pull requests:
+Mohon mengikuti langkah-langkah berikut untuk pull requests:
 
-- Modify only one tag, or one related set of tags at a time
-- Use double quotes on attributes
-- Don't include a trailing slash in self-closing elements — the HTML5 spec says they're optional
-- Consider including a link to documentation that supports your change
+- Modifikasi hanya untuk satu tag, atau satu yang berelasi rangkaian dari tag disaat yang bersamaan
+- Gunakan double quotes pada atribut
+- Jangan memasukan sebuah trailing slash pada self-closing elements — spesifikasi HTML5  mengatakan itu optional
+- Pertimbangkan memasukan sebuah tautan ke dokumentasi yang mendukung perubahan anda
 
 #### 2. `gh-pages`
 
-This branch is responsible for the [htmlhead.dev](https://htmlhead.dev/) website. We use [Jekyll](https://jekyllrb.com/) to deploy the `README.md` Markdown file through [GitHub Pages](https://pages.github.com/). All website related modifications must be directed here.
+Cabang ini bertanggung jawab [htmlhead.dev](https://htmlhead.dev/) website. Kita menggunakan [Jekyll](https://jekyllrb.com/) untuk deploy `README.md` Markdown melalui [GitHub Pages](https://pages.github.com/). Semua modifikasi terkait website harus diarahkan kesini.
 
-You may want to go through the [Jekyll Docs](https://jekyllrb.com/docs/home/) and understand how Jekyll works before working on this branch.
+Anda mungkin ingin melalui [Jekyll Docs](https://jekyllrb.com/docs/home/) dan memahami bagaimana kinerja Jekyll sebelum bekerja untuk cabang ini.
 
 ### Contributors
 
-Check out all the super awesome [contributors](https://github.com/joshbuchea/HEAD/graphs/contributors).
+Periksa semua super awesome berikut [contributors](https://github.com/joshbuchea/HEAD/graphs/contributors).
 
 ## Author
 
